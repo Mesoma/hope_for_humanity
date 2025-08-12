@@ -1,30 +1,28 @@
 // ignore_for_file: prefer_const_constructors,
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
-//pub get done
-
 import 'package:flutter/material.dart';
 import 'package:hope_for_humanity/constant/app_pallete.dart';
 import 'package:hope_for_humanity/pages/sign_in_page.dart';
 
-class IntroPage extends StatefulWidget {
-  const IntroPage({super.key});
+class DubIntro extends StatefulWidget {
+  const DubIntro({super.key});
 
   @override
-  State<IntroPage> createState() => _IntroPageState();
+  State<DubIntro> createState() => _DubIntroState();
 }
 
-class _IntroPageState extends State<IntroPage> {
+class _DubIntroState extends State<DubIntro> {
   @override
   void initState() {
     Future.delayed(Duration(seconds: 4),() {
       Navigator.push(
           context,
           MaterialPageRoute(
-          builder: (context)=> SignInPage()
-         )
-       );
-      },
+              builder: (context)=> SignInPage()
+          )
+      );
+    },
     );
     super.initState();
   }
@@ -58,23 +56,23 @@ class _IntroPageState extends State<IntroPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(height:190),
-                //App Icon
+                  //App Icon
                   Image.asset(
-                      'assets/images/hope_logo.png',
-                      height: 130,
-                      width: 130,
+                    'assets/images/hope_logo.png',
+                    height: 130,
+                    width: 130,
                   ),
 
-                const SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
 
-                //App Name
+                  //App Name
                   Column(
                     children: [
                       Text(
                         "HOPE FOR",
                         style: TextStyle(
-                            fontSize: 40,
-                            color: Colors.white,
+                          fontSize: 40,
+                          color: Colors.white,
                         ),
                       ),
                       Text(
@@ -88,16 +86,16 @@ class _IntroPageState extends State<IntroPage> {
                     ],
                   ),
 
-                const SizedBox(height: 160),
+                  const SizedBox(height: 160),
 
-                //App Intro
+                  //App Intro
                   Text(
-                      "Welcome to",
-                      style: TextStyle(
+                    "Welcome to",
+                    style: TextStyle(
                         fontSize: 33,
                         fontWeight: FontWeight.bold,
                         color: AppPallete.textColor2
-                  ),
+                    ),
                   ),
                   Text(
                     "hope for humanity",
